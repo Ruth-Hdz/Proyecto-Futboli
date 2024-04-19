@@ -1,0 +1,39 @@
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Columna izquierda con el formulario de inicio de sesión -->
+      <div class="col-sm-12 col-md-6 col-lg-4" style="background-color: #0a223f;">
+        <!-- Contenedor para el logo -->
+        <div class="logo">
+          <a>
+            <img routerLink="/Inicio" src="../../assets/Imagenes/A.png" alt="logo">
+          </a>
+        </div>
+        <div class="bg-gray-300">
+          <div>
+            <h1 style="color: white; text-align: center">Inicia Sesion</h1>
+            <div>
+              <div class="form-floating mb-3">
+                <input type="email" name="email" id="floatingInput" #email class="form-control" placeholder="" required>
+                <label for="floatingInput">Your email</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" name="password" id="floatingPassword" placeholder=" " #password
+                  class="form-control" required>
+                <label for="floatingPassword" class="text-gray-900">Password</label>
+              </div>
+              <p class="text-red mt-2">{{ errorMessage }}</p>
+              <!-- Mostrar mensaje de error -->
+              <button  type="button" (click)="logIn(email.value, password.value)">Login</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Columna derecha con la imagen de fondo -->
+      <div class="col-sm-12 col-md-6 col-lg-8">
+        <img src="../../assets/Imagenes/Admin/FUT.jpg" alt="Login image" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>

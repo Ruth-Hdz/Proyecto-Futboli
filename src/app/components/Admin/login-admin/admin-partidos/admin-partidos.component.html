@@ -1,0 +1,74 @@
+<div class="sidebar" id="sidebar">
+  <app-sidebar></app-sidebar>
+</div>
+
+<div>
+  <nav class="navbar just">
+    <h1>Partidos</h1>
+  </nav>
+
+  <div class="content top">
+    <div class="card">
+      <div class="selection-temporada">
+        <h3><b>Partidos por torneo</b></h3>
+        <div class="divison">
+          <select id="temporadas" class="form-select" aria-label="Selecciona torneo">
+            <option selected>Selecciona torneo</option>
+            <option value="temp1">Temporada 1</option>
+            <option value="temp2">Temporada 2</option>
+            <option value="temp3">Temporada 3</option>
+            <option value="temp4">Temporada 4</option>
+          </select>
+          <select id="temporadas" class="form-select" aria-label="Selecciona torneo">
+            <option selected>Selecciona torneo</option>
+            <option value="temp1">Temporada 1</option>
+            <option value="temp2">Temporada 2</option>
+            <option value="temp3">Temporada 3</option>
+            <option value="temp4">Temporada 4</option>
+          </select>
+          <button class="añadir"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+        </div>
+        <hr>
+        <h1>Partidos pendientes</h1>
+        <div class="scroll">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <td>Equipo 1</td>
+                <td>-</td>
+                <td>0</td>
+                <td>VS</td>
+                <td>0</td>
+                <td>-</td>
+                <td>Equipo 2</td>
+                <td><button class="ir" routerLink="/partidos-admin"><i
+                      class="fa-solid fa-up-right-from-square"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <hr>
+      <h1>Partidos finalizados</h1>
+      <div class="scroll">
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <td>Equipo 1</td>
+              <td>-</td>
+              <td>0</td>
+              <td>VS</td>
+              <td>0</td>
+              <td>-</td>
+              <td>Equipo 2</td>
+              <td><button class="ir" routerLink="/partidos-admin"><i
+                    class="fa-solid fa-up-right-from-square"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

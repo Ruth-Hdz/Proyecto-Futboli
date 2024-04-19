@@ -1,0 +1,222 @@
+<div class="sidebar" id="sidebar">
+  <app-sidebar></app-sidebar>
+</div>
+
+<div>
+  <nav class="navbar just">
+    <h1>Partidos</h1>
+  </nav>
+  <div class="content top">
+    <button class="añadir" routerLink="/Admin-Partidos">
+      <i class="fas fa-chevron-left"></i> Regresar
+    </button>
+  </div>
+  <div class="content">
+    <div class="card">
+      <div class="selection-temporada">
+        <h3 class="txt-justify">
+          <b>Partido pendiente / finalizado</b>
+        </h3>
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <td>Equipo 1</td>
+              <td>-</td>
+              <td>0</td>
+              <td>VS</td>
+              <td>0</td>
+              <td>-</td>
+              <td>Equipo 2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h3><b>Información del partido</b></h3>
+        <h4 class="txt-justify">
+          Da click en en botón “+ Añadir datos” para agregar la información
+          necesaria acerca de donde se llevará a cabo el partido y el público
+          pueda visualizarlo.
+        </h4>
+      </div>
+      <div class="texto">
+        <h4 class="txt-justify">
+          Este partido de futbol se llevará a cabo el día _____________ a las
+          __________ horas, en el campo de ________. Correspondiendo al número
+          de jornada ________ de la categoría ________.
+        </h4>
+       <button class="save-button" (click)="openModalDATOS()">
+  <i class="fa-solid fa-plus"></i> Añadir Datos
+</button>
+<app-modal-partidos-agregardatos
+  *ngIf="openModalAgregarDATOS"
+  (onCloseModal)="closeModalDATOS()"
+></app-modal-partidos-agregardatos>
+
+      </div>
+      <hr />
+      <h3 style="margin-bottom: -2.5rem">
+        <b>Antecedentes durante el partido</b>
+      </h3>
+      <div class="texto">
+        <h4 class="txt-justify">
+          Registra los goles, amonestaciones (tarjeta amarilla) y expulsiones
+          (tarjeta roja) durante el partido, da click en el botón “+ Registar
+          suceso” y llena el formulario.
+        </h4>
+        <button class="save-button" (click)="openSucesoModal()">
+          <i class="fa-solid fa-plus"></i> Agregar Suceso
+      </button>
+      <app-modal-partidos-agregarsuceso *ngIf="showSucesoModal" (onCloseModal)="closeSucesoModal()"></app-modal-partidos-agregarsuceso>
+
+      
+    
+        <div class="ajuste">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th>Equipo</th>
+                <th>Jugador</th>
+                <th>Evento</th>
+                <th>Causal</th>
+                <th>Hora</th>
+              </tr>
+              <tr>
+                <td>Equipo 1</td>
+                <td>Chicharito</td>
+                <td>Gol</td>
+                <td>Gol por saque de banda</td>
+                <td>10:18</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <hr />
+      <div>
+        <h3><b>Evaluación de recursos adicionales equipo</b></h3>
+        <h4 class="txt-justify">
+          Verifica y evalúa que los equipos de futbol poseen los
+          recursos/materiales necesarios para llevar a cabo el partido, también
+          puedes evaluar la conducta de la porra dándole click a los botones
+          correspondientes.
+        </h4>
+        <div class="ajuste">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th>Equipo</th>
+                <th>botiquín</th>
+                <th>Balones</th>
+                <th>Gafete Capitán</th>
+                <th>Director tecnico</th>
+                <th>Puntos</th>
+                <th>Conducta de la porra</th>
+                <th>Puntos</th>
+              </tr>
+              <tr>
+                <td>Equipo 1</td>
+                <td>No</td>
+                <td>Si</td>
+                <td>No</td>
+                <td>Si</td>
+                <td>-20</td>
+                <td>Buena</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            <button class="equipamiento" (click)="openModalEQUIPAMIENTO()">
+              <i class="fa-solid fa-plus"></i> Evaluar equipamiento
+            </button>
+            <app-modal-partidos-evaluarequipamiento *ngIf="openModalEvalularEQUIPAMIENTO"
+              (onCloseModal)="closeModalEQUIPAMIENTO()">
+            </app-modal-partidos-evaluarequipamiento>
+                 </div>
+                 <button class="porra" (click)="openModalPORRA()">
+                  <i class="fa-solid fa-plus"></i> Evaluar porra
+                </button>
+                
+                <app-modal-partidos-evaluarporra *ngIf="openModalEvalularPORRA" (onCloseModal)="closeModalPORRA()"></app-modal-partidos-evaluarporra>
+                
+        </div>
+      </div>
+      <hr />
+      <div>
+        <h3><b>Control de asistencia</b></h3>
+        <h4 class="txt-justify">
+          Selecciona el equipo para llevar acabo la asistencia de los jugadores
+        </h4>
+        <div class="divison">
+          <div class="izq">
+            <select class="custom-select" [(ngModel)]="selectedEquipo" (change)="onEquipoChange()">
+              <option value="">Escoge un equipo</option>
+              <option *ngFor="let equipo of equipos; let i = index" [value]="i">{{equipo}}</option>
+            </select>
+            
+          
+          </div>
+          <div class="der">
+            <table class="table">
+              <thead class="txt-justify">
+                <tr>
+                  <th>No.</th>
+                  <th>Nombre completo</th>
+                  <th>Fecha</th>
+                  <th colspan="2">Asistencia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let jugador of jugadores">
+                  <td>{{jugador.id}}</td>
+                  <td>{{jugador.nombre}}</td>
+                  <td><input class="date" type="date" [(ngModel)]="jugador.fechaAsistencia" /></td>
+                  <td>
+                      <label class="switch">
+                          <input type="checkbox" [(ngModel)]="jugador.asistencia" />
+                          <span class="slider round"></span>
+                      </label>
+                  </td>
+                  <td><button class="save-button2" (click)="guardarAsistencia(jugador)">Guardar</button></td>
+              </tr>
+              
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+      <hr />
+      <div class="a">
+        <h3><b>Cierre del partido</b></h3>
+        <h4 class="txt-justify">
+          Deja algún comentario acerca de este partido. No olvides dar click en
+          el botón “Finalizar el partido” cuando haya concluido el juego.
+        </h4>
+        <div class="ajuste">
+          <textarea
+            class="comentario"
+            [(ngModel)]="comentario"
+            placeholder=" Describre tu opinión sobre el juego"
+          ></textarea>
+        </div>
+        <div>
+          <button class="save-button" (click)="guardarComentario()">Guardar</button>
+        </div>
+      </div>
+      
+      <hr />
+      <br />
+      <div>
+        <div>
+          <button class="final" [disabled]="clicsRestantes <= 0" (click)="finalizarPartido()">
+            <h2><b>Finalizar el partido</b></h2>
+          </button>
+        </div>
+        
+        
+      
+    </div>
+  </div>
+</div>

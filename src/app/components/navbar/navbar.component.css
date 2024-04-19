@@ -1,0 +1,150 @@
+:host {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    display: block;
+    background-color: #081858;
+    font-weight: 600;
+}
+
+svg {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 3.9rem;
+    display: block;
+}
+
+.navbar img {
+    margin: 1rem;
+    height: 6rem;
+    width: auto;
+}
+
+.optionsnav {
+    font-size: 1.7rem;
+}
+
+.option {
+    color: white;
+}
+
+.option:hover {
+    color: #018FE3;
+}
+
+.optionsnav a.active {
+    color: #018FE3;
+    font-size: 1.7rem;
+}
+
+
+
+@media screen and (max-height: 50px) {
+    .top {
+        /* Esto quita el SVG cuando scroll es de 50px */
+        display: none !important;
+    }
+
+}
+
+/* -------------------------------------------------- */
+@media screen and (max-width: 1400px) {
+    .navbar {
+        height: auto;
+
+    }
+
+    .navbar img {
+        height: 6rem;
+        width: auto;
+        margin: 0.01rem;
+
+    }
+
+    .optionsnav {
+        font-size: 1.3rem;
+    }
+
+    .optionsnav a.active {
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .navbar {
+        height: auto;
+
+    }
+
+    .navbar img {
+        height: 6rem;
+        width: auto;
+        margin: 0.01rem;
+
+    }
+    .optionsnav {
+        font-size: 1.3rem;
+    }
+    .optionsnav a.active {
+        font-size: 1.3rem;
+    }
+    .svg{
+        margin-top: 0.5rem;
+    }
+}
+@media screen and (max-width: 991px) {
+    .svg {
+        display: none !important;
+    }
+    .navbar {
+        height: auto;
+
+    }
+
+    .navbar img {
+        height: 4rem;
+        width: auto;
+        margin: 0.01rem;
+
+    }
+    .optionsnav {
+        font-size: 1.2rem;
+    }
+    .optionsnav a.active {
+        font-size: 1.2rem;
+    }
+    .svg{
+        margin-top: 0.5rem;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+     .navbar {
+        height: auto;
+
+    }
+
+    .navbar img {
+        height: 4rem;
+        width: auto;
+        margin: 0.01rem;
+
+    }
+    .optionsnav {
+        font-size: 1.1rem;
+    }
+    .optionsnav a.active {
+        font-size: 1.1rem;
+    }
+    .svg{
+        margin-top: 5rem;
+    }
+}

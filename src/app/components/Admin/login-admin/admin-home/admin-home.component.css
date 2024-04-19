@@ -1,0 +1,372 @@
+.just {
+  margin-left: 25rem
+}
+
+.content {
+  margin-left: 25rem;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #078cb4;
+  color: #011F3A;
+  padding: 10px;
+  border-bottom: 2px solid #011F3A
+}
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+.container {
+  margin: 5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #d9d9d921;
+  border-radius: 12px;
+}
+
+.text-section {
+  margin: 2rem;
+  margin-top: 10rem;
+  width: 50%;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.image-section {
+  margin: 2rem;
+  width: auto;
+  height: 35rem;
+  overflow: hidden;
+  /* Evita que la imagen se extienda más allá de su contenedor */
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ajusta la imagen para cubrir completamente el contenedor sin distorsión */
+
+}
+
+/* -------------------------------------------- */
+.center {
+  text-align: center;
+  margin: 0;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.card {
+  width: 20%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.5rem;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.card hr {
+  width: 95%;
+  border: 1px solid #000000;
+  /* Color y estilo de la línea */
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.card p {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+.unica {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* esta clase se creo porque es la unica imagen que tiene 
+  una resolucion diferente a las demas (es mas chica XD) */
+}
+
+/* ---------------------------- */
+
+.content2 {
+  margin: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.recibo-container {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.bold-text {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.left-image {
+  width: 40%;
+}
+
+.text-justified {
+  font-size: 1.5rem;
+  text-align: justify;
+  width: 55%;
+}
+
+.custom-button {
+  background-color: #FEE2C5;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  cursor: pointer;
+  margin-bottom: 4rem;
+}
+
+.txt {
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-bottom: 3rem;
+}
+
+/* ------------------------------------------ */
+@media screen and (max-width: 1500px) {
+  .container {
+    margin: 1rem;
+
+  }
+
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+  .sidebar {
+    width: 17rem;
+  }
+
+  .just {
+    margin-left: 17rem
+  }
+
+  .content {
+    margin-left: 17rem;
+    padding: 20px;
+  }
+
+  .txt {
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-bottom: 3rem;
+  }
+
+  .text-section {
+    margin: 2rem;
+    margin-top: 10rem;
+    width: 50%;
+    text-align: justify;
+    font-size: 1.1rem;
+  }
+
+  .image-section {
+    margin: 3rem;
+    width: auto;
+    height: 25rem;
+    overflow: hidden;
+    /* Evita que la imagen se extienda más allá de su contenedor */
+  }
+
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta la imagen para cubrir completamente el contenedor sin distorsión */
+
+  }
+}
+
+/* ------------------------------------------ */
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 13rem;
+  }
+
+  .just {
+    margin-left: 13rem
+  }
+
+  .content {
+    margin-left: 13rem;
+    padding: 20px;
+  }
+
+  .text-section {
+    margin-top: 5rem;
+    font-size: 1rem;
+  }
+
+  .image-section {
+    margin-top: 7rem;
+    height: 12rem;
+    /* Evita que la imagen se extienda más allá de su contenedor */
+  }
+
+  .image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta la imagen para cubrir completamente el contenedor sin distorsión */
+
+  }
+
+  .unica {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    /* esta clase se creo porque es la unica imagen que tiene 
+    una resolucion diferente a las demas (es mas chica XD) */
+  }
+
+  .center {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+
+  }
+
+  .bold-text {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .text-justified {
+    font-size: 1rem;
+    text-align: justify;
+    width: 55%;
+  }
+
+  .left-image {
+    width: 30%;
+  }
+
+  .txt {
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: 3rem;
+  }
+
+}
+
+/* ------------------------------------------ */
+
+@media screen and (max-width: 500px) {
+  ul li {
+    margin-left: 0.5rem;
+    font-size: 2.5rem;
+    padding: 6px 0;
+    /* Ajusta el espaciado vertical entre elementos */
+    margin-bottom: 4rem;
+    /* Elimina el margen inferior entre elementos */
+  }
+
+  .image-section img {
+    display: none;
+  }
+
+  .logo h1 {
+    display: none;
+  }
+  .fa-user{font-size: 1rem;}
+  .sidebar {
+    width: 4rem;
+  }
+
+  .just {
+    margin-left: 4rem;
+  }
+
+  hr {
+    border: 1px solid #fff;
+    margin: 10px 0;
+  }
+
+  .content {
+    margin-left: 4rem;
+    padding: 0;
+  }
+
+
+  .cero {
+    font-size: 0;
+    padding: 0;
+    /* Elimina el espaciado entre elementos con clase "cero" */
+    margin-bottom: 0;
+    /* Elimina el margen inferior entre elementos con clase "cero" */
+  }
+
+  .cero a {
+    display: none;
+  }
+
+  .cero i {
+    font-size: 1.5rem;
+  }
+
+  /* para lado derecho NO MENU */
+  .cards {
+    display: flex;
+    /* Cambia el flujo a flex */
+    flex-direction: column;
+    /* Apila las tarjetas verticalmente */
+    align-items: center;
+  }
+
+  .card {
+    display: block;
+    width: 80%;
+    margin: 1rem;
+  }
+
+  .left-image {
+  display: none;
+  }
+
+  .text-justified {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+  .text-section {
+    margin: 0.5rem;
+    margin-top: 5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+}

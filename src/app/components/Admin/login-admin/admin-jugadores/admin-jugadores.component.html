@@ -1,0 +1,43 @@
+<div class="sidebar" id="sidebar">
+    <app-sidebar></app-sidebar>
+</div>
+<nav class="navbar just fixed-navbar">
+    <h1>
+        <i class="fas fa-user"></i> Jugadores
+    </h1>
+</nav>
+
+<div class="content">
+    <div class="search-container">
+        <div class="search-wrapper">
+            <input type="text" [(ngModel)]="searchTerm" class="search-input" placeholder="Buscar Categorías...">
+<!--             <button class="custom-button2">Buscar</button>
+ -->        </div>
+    </div>
+
+    <div class="orden-container">
+        <div class="search-wrapper">
+            <!-- <b>Buscar por: </b>
+            <p>Codigo</p>
+            <input type="checkbox">
+            <p>Nombre</p>
+            <input type="checkbox"> -->
+        </div>
+    </div>
+    <hr>
+    <button class="custom-button" routerLink="/Admin-RegistroJugador">
+        <i class="far fa-address-book"></i> Registrar jugador
+    </button>
+    <div class="scroll">
+        <div>
+        <div class="card" routerLink="/card-jugador" *ngFor="let jugador of jugadores | filter: searchTerm">
+            <div class="">
+              <img src="../../../../../assets/imagenes/Admin/img(3).png" alt="categorías">
+              <hr>
+              <h3>{{ jugador.nombre }}</h3>
+              <p>{{ jugador.id }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
