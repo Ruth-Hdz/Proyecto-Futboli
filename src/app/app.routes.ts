@@ -50,7 +50,8 @@ const app_routes: Routes = [
   { path: 'Categoria-Sub-17', component: Sub17Component },
   { path: 'Acerca', component:AcercaComponent},
 
-  /* Admin */
+  /* Admin */ 
+  //proteccion de rutas 
   { path: 'modalnuevacategoria', component: ModalNuevacategoriasComponent,canActivate: [AuthGuard]},
   
   { path: 'Admin-Home', component: AdminHomeComponent, canActivate: [AuthGuard] },

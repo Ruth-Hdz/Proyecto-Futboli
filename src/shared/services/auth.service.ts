@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-
+// TODA LA LOGICA DE INICIO DE SESION CON FIREBASE
   userData: any;
 
   constructor(

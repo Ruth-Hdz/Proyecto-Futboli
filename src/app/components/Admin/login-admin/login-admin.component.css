@@ -13,6 +13,13 @@ section {
   height: 40%;
 }
 
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem; /* Tamaño de letra más pequeño */
+  font-weight: bold; /* Texto en negritas */
+}
+
 .container-fluid, .row {
   height: 100%;
 }
@@ -44,7 +51,7 @@ label {
 
 .bg-gray-300 {
   width: 400px;
-  height: 350px;
+  height: 310px;
   background-color: #3b3939;
   border-radius: 0.7rem;
   padding: 2rem;
@@ -56,17 +63,17 @@ button {
   color: #0a223f;
   padding: 0.625rem 1.25rem;
   border-radius: 0.5rem;
-  font-weight: 500;
+  font-weight: bold;
   transition: background-color 0.3s ease;
   display: flex;
   margin: 20px auto 0;
 }
-
+.button-container {
+  text-align: center; /* Alinea el botón al centro */
+}
 .text-red {
   color: #ef4444;
 }
-
-
 
 /* Ajustes para tablets */
 @media (max-width: 991px) {

@@ -6,26 +6,28 @@
         <!-- Contenedor para el logo -->
         <div class="logo">
           <a>
+             <!--LOGO DIRIGE A PAGINA DE INICIO-->
             <img routerLink="/Inicio" src="../../assets/Imagenes/A.png" alt="logo">
           </a>
         </div>
         <div class="bg-gray-300">
           <div>
-            <h1 style="color: white; text-align: center">Inicia Sesion</h1>
+            <h1 style="color: white; text-align: center">Inicia Sesión</h1>
             <div>
               <div class="form-floating mb-3">
                 <input type="email" name="email" id="floatingInput" #email class="form-control" placeholder="" required>
-                <label for="floatingInput">Your email</label>
+                <label for="floatingInput">Correo electronico</label>
               </div>
               <div class="form-floating">
                 <input type="password" name="password" id="floatingPassword" placeholder=" " #password
                   class="form-control" required>
-                <label for="floatingPassword" class="text-gray-900">Password</label>
+                <label for="floatingPassword" class="text-gray-900">Contraseña</label>
               </div>
               <p class="text-red mt-2">{{ errorMessage }}</p>
               <!-- Mostrar mensaje de error -->
-              <button  type="button" (click)="logIn(email.value, password.value)">Login</button>
-              
+              <div class="button-container">
+                <button type="button" (click)="logIn(email.value, password.value)">Login</button>
+              </div>
             </div>
           </div>
         </div>
